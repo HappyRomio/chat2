@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/reset.css" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
+    <script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/1.0.2/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/2.3.3/stomp.min.js"></script>
+    <script src="../../js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="connect()">
+    <div class="wrapper">
+        <main class="page-main">
+            <div id="s1" class="col" style="width: 75%;">
+                <div id="blockchat" class="block chat">
+                    <ul class="messages"></ul>
+                </div>
+                    <div class="message-block">
+                        <textarea class="message-field" name="" id="message_input_value" cols="30" rows="1"
+                            placeholder="Сообщение"></textarea>
+                        <button onclick="sendMessage()">Отправить</button>
+                    </div>
+            </div>
+            <div class="col" style="width: 25%;">
+                <p align="center">Пользователи онлайн:</p>
+                <div id="block_sidebar" class="block sidebar">
+                    <ul class="users"></ul>
+                </div>
+    </div>
+        </main>
+    </div>
+    <div id="message_template" class="message_template">
+        <li class="message"><div class="avatar"></div>
+            <div class="text_wrapper">
+                <div class="text"></div>
+            </div></li>
+    </div>
+
+</body>
+
+</html>
